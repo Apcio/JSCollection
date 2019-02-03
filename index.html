@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kolekcja książek</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="col-sm-12">
+                <img src="img/ksiazka.png" width="100px" height="auto">
+                MOJA <span style="color:red">KOLEKCJA</span> KSIĄŻEK
+            </h1>
+        </div>
+
+        <div class="row">
+            <form id="collection-form" class="col-sm-12" novalidate action="#" autocomplete="on"> 
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="inAutor">Autor</label>
+                        <input type="text" id="inAutor" class="form-control" placeholder="Autor książki" required>
+                        <div class="invalid-feedback">Proszę wprowadzić autora książki</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-3">
+                        <label for="inTytul">Tytuł</label>
+                        <input type="text" id="inTytul" class="form-control" placeholder="Tytuł książki" required>
+                        <div class="invalid-feedback">Proszę wprowadzić tytuł książki</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6 mb-4">
+                        <label for="inISBN">ISBN</label>
+                        <input type="number" id="inISBN" class="form-control" placeholder="ISBN" required>
+                        <div class="invalid-feedback d-none" id="isbnInvalid">Proszę wprowadzić ISBN</div>
+                        <div class="invalid-feedback d-none" id="isbnExisted">Podany ISBN istnieje już w kolekcji</div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="col-sm-6">
+                        <input class="btn btn-primary btn-block btn-lg" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <br><br>
+        
+        <div class="row col-sm-12">
+            <table class="table table-striped" id="BookListTable">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Autor</th>
+                        <th scope="col">Tytuł</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">Kasuj</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+ 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
